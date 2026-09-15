@@ -1,0 +1,213 @@
+/* =========================================================
+   CONFIGURACIÓN GENERAL
+   ========================================================= */
+
+/* 
+   box-sizing: border-box permite que el ancho y alto definidos
+   incluyan el contenido, padding y border del elemento.
+   Esto facilita el control de las dimensiones.
+*/
+* {
+    box-sizing: border-box;
+}
+
+/* 
+   Estilos generales de la página:
+   - Eliminamos los márgenes y padding predeterminados del navegador.
+   - Definimos un color de fondo para diferenciar el post.
+   - Aplicamos la fuente Roboto importada desde Google Fonts.
+*/
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    font-family: "Roboto", sans-serif;
+}
+
+
+/* =========================================================
+   CONTENEDOR PRINCIPAL DEL POST
+   ========================================================= */
+
+/* 
+   .post representa el contenedor principal de nuestra
+   publicación de Instagram.
+
+   width:
+   Define el ancho del post.
+
+   margin:
+   50px crea espacio vertical y "auto" centra
+   horizontalmente el elemento.
+
+   border:
+   Permite visualizar los límites del post.
+*/
+.post {
+    width: 500px;
+    margin: 50px auto;
+    background-color: white;
+    border: 1px solid #ddd;
+}
+
+
+/* =========================================================
+   CABECERA DEL POST
+   ========================================================= */
+
+/* 
+   Utilizamos Flexbox para organizar horizontalmente
+   la información del usuario y el menú de opciones.
+
+   justify-content: space-between
+   Coloca los elementos en extremos opuestos.
+
+   align-items: center
+   Alinea los elementos verticalmente al centro.
+
+   padding:
+   Crea espacio interno entre el contenido y los bordes.
+*/
+.post-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 15px;
+}
+
+/* 
+   También utilizamos Flexbox para colocar el icono HTML5
+   junto a la información del usuario.
+   
+   gap:
+   Define el espacio entre los elementos hijos.
+*/
+.post-user {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* 
+   Ajustamos el tamaño del icono HTML5 proporcionado
+   por Font Awesome.
+*/
+.post-user i {
+    font-size: 35px;
+}
+
+/* 
+   display: block hace que el nombre ocupe su propia línea.
+   También definimos el tamaño del texto.
+*/
+.post-user strong {
+    display: block;
+    font-size: 15px;
+}
+
+/* 
+   Ajustamos el margen del párrafo para controlar
+   el espacio entre el nombre y el usuario.
+*/
+.post-user p {
+    margin: 2px 0 0;
+    font-size: 13px;
+}
+
+/* 
+   Definimos el tamaño del icono de tres puntos
+   del menú de opciones.
+*/
+.post-menu {
+    font-size: 22px;
+}
+
+
+/* =========================================================
+   IMAGEN DEL POST
+   ========================================================= */
+
+/* 
+   El contenedor de la imagen ocupa todo el ancho
+   disponible del post.
+*/
+.post-img {
+    width: 100%;
+}
+
+/* 
+   La imagen ocupa el 100% del ancho de su contenedor.
+
+   display: block elimina el espacio adicional que puede
+   aparecer debajo de una imagen cuando se comporta
+   como elemento inline.
+*/
+.post-img img {
+    width: 100%;
+    display: block;
+}
+
+
+/* =========================================================
+   BARRA DE ICONOS
+   ========================================================= */
+
+/* 
+   Flexbox permite colocar los grupos de iconos
+   horizontalmente.
+
+   space-between separa el grupo izquierdo del
+   icono de guardar ubicado a la derecha.
+*/
+.post-icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 15px 5px;
+}
+
+/* 
+   Utilizamos Flexbox para colocar los tres iconos
+   de interacción uno junto al otro.
+
+   gap controla la separación entre ellos.
+*/
+.icons-left {
+    display: flex;
+    gap: 15px;
+}
+
+/* 
+   Definimos el tamaño de los iconos y utilizamos
+   cursor: pointer para mostrar que son elementos
+   interactivos.
+*/
+.post-icons i {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   CUERPO DEL POST
+   ========================================================= */
+
+/* 
+   padding crea espacio interno entre el contenido
+   de texto y los bordes del post.
+*/
+.post-body {
+    padding: 0 15px 15px;
+}
+
+/* 
+   Ajustamos los párrafos del cuerpo:
+   - margin controla la separación vertical.
+   - font-size define el tamaño del texto.
+   - line-height controla el espacio entre líneas.
+*/
+.post-body p {
+    margin: 8px 0;
+    font-size: 14px;
+    line-height: 1.4;
+}

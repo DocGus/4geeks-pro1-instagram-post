@@ -1,44 +1,181 @@
-# HTML Hello
+# 📸 Post de Instagram — 4Geeks
 
-El boilerplate más básico para cualquier estudiante de 4Geeks Academy, empieza tu primer sitio web desde cero.
+> Recreación visual de una publicación de Instagram con HTML5 y CSS3.
 
-> Tienes un video tutorial sobre [cómo usar esta plantilla para crear tu primer sitio web aquí](https://youtu.be/dfbDCMu_p-0).
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3.x-3776AB?logo=python&logoColor=white)
+![Flask](https://img.shields.io/badge/Flask-local-000000?logo=flask&logoColor=white)
 
-## ¿Qué hacer a continuación?
+## 📌 Descripción
 
-Crea un archivo `index.html` con [la estructura básica de HTML](https://4geeks.com/es/lesson/what-is-html-learn-html-es#estructura-de-pgina) y ve el resultado en vivo corriendo un servidor web utilizando el siguiente comando:
+Este proyecto forma parte de los ejercicios de **4Geeks Academy**. El objetivo es recrear la interfaz de un post de Instagram a partir de una referencia visual, practicando la estructura semántica de HTML y los fundamentos de CSS.
+
+El proyecto comenzó utilizando la [plantilla oficial de 4Geeks Academy](https://github.com/4GeeksAcademy/html-hello), que incluye un servidor local basado en Flask.
+
+## 🚀 Cómo ejecutarlo
+
+### Requisitos
+
+- Python 3
+- Flask
+
+### Instalación
+
+1. Crea y activa un entorno virtual si todavía no tienes uno.
+2. Instala Flask:
 
 ```bash
-$ pip3 install flask && python3 server.py
+pip install flask
 ```
 
-- Puedes crear tantos archivos HTML cómo desees.
-- También puedes crear archivos CSS e importarlos en tu página web utilizando una etiqueta `<link>` ubicándola entre las etiquetas `<head></head>`, de la siguiente manera:
+3. Inicia el servidor local:
+
+```bash
+python server.py
+```
+
+4. Abre [http://127.0.0.1:3000](http://127.0.0.1:3000) en el navegador.
+
+## 🛠️ Tecnologías utilizadas
+
+| Tecnología | Uso |
+| --- | --- |
+| HTML5 | Estructura del post |
+| CSS3 | Diseño, espaciado y distribución |
+| Python | Ejecución del servidor local |
+| Flask | Servidor de desarrollo |
+| Google Fonts | Tipografía Roboto |
+| Font Awesome | Iconos de la interfaz |
+| Git y GitHub | Control de versiones |
+
+## 🧱 Estructura del proyecto
+
+```text
+4geeks-pro1-instagram-post/
+├── index.html
+├── styles.css
+├── server.py
+├── learn.json
+├── README.md
+├── README.es.md
+├── README.cn.md
+└── .gitignore
+```
+
+> El entorno virtual `venv/` se mantiene fuera del control de versiones mediante `.gitignore`.
+
+## 🧩 Estructura del post
+
+La interfaz se dividió en los siguientes bloques:
+
+```text
+Post
+├── Cabecera
+│   ├── Icono HTML5
+│   ├── Nombre y usuario
+│   └── Menú de opciones
+├── Imagen
+├── Barra de iconos
+│   ├── Like
+│   ├── Comentario
+│   ├── Compartir
+│   └── Guardar
+└── Cuerpo del post
+    ├── Información de likes
+    └── Descripción
+```
+
+Entre los elementos HTML utilizados se encuentran `div`, `strong`, `p`, `img`, `i` y `link`.
+
+## 🎨 Conceptos de CSS practicados
+
+### Selectores y Box Model
+
+Se utilizaron clases para aplicar estilos específicos a cada componente, por ejemplo:
+
+```css
+.post {
+    width: 500px;
+    margin: 50px auto;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+}
+```
+
+También se practicaron `margin`, `padding`, `border`, `width` y `box-sizing`.
+
+### Flexbox
+
+Flexbox se utilizó para organizar horizontalmente la cabecera, la información del usuario y los iconos:
+
+```css
+.post-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+```
+
+### Tipografía e imágenes
+
+Se utilizó Roboto mediante Google Fonts y se adaptó la imagen al ancho disponible del post:
+
+```css
+.post-img img {
+    width: 100%;
+    display: block;
+}
+```
+
+## ⭐ Iconos e imagen
+
+Los iconos de HTML5, like, comentarios, compartir, guardar y menú de opciones se incorporaron mediante Font Awesome y su CDN.
+
+Durante el desarrollo se utilizó [Picsum Photos](https://picsum.photos/) como fuente provisional de imagen:
 
 ```html
-<head>
-  ...
-  <link rel="stylesheet" type="text/css" href="styles.css">
-  ...
-</head>
+<img
+    src="https://picsum.photos/500/350"
+    alt="Fotografía del post"
+>
 ```
 
-- Si deseas usar Tailwind CSS, agrégalo de forma opcional mediante el CDN oficial de Tailwind CSS v4 dentro del mismo `<head>`:
+Al tratarse de un servicio de imágenes aleatorias, la fotografía puede cambiar al recargar la página.
 
-```html
-<head>
-  ...
-  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-  <link rel="stylesheet" type="text/css" href="styles.css">
-  ...
-</head>
-```
+## 📚 Lo que aprendí
 
+- Crear la estructura básica de un documento HTML5.
+- Relacionar HTML y CSS mediante clases y hojas de estilos.
+- Aplicar el modelo de cajas y organizar componentes con Flexbox.
+- Utilizar Google Fonts y Font Awesome mediante CDN.
+- Adaptar imágenes al tamaño de un contenedor.
+- Visualizar un proyecto con un servidor local de Flask.
+- Trabajar con entornos virtuales de Python.
+- Utilizar Git y GitHub durante el desarrollo.
 
-## Agradecimientos
+## 🔄 Proceso de desarrollo
 
-Esta y otras plantillas son utilizadas para [aprender a programar](https://4geeksacademy.com/es/aprender-a-programar/aprender-a-programar-desde-cero) por parte de los alumnos de 4Geeks Academy [Coding Bootcamp](https://4geeksacademy.com/us/coding-bootcamp). 
+1. Crear un repositorio a partir de la plantilla de 4Geeks Academy.
+2. Clonar el repositorio y abrirlo en VS Code.
+3. Crear el entorno virtual e instalar Flask.
+4. Construir la estructura HTML del post.
+5. Conectar `index.html` con `styles.css`.
+6. Incorporar Google Fonts y Font Awesome.
+7. Aplicar estilos y organizar los componentes con Flexbox.
+8. Ejecutar el servidor local y comprobar los cambios.
+9. Controlar las modificaciones con Git.
 
-Realizado por [Alejandro Sánchez](https://twitter.com/alesanchezr) y muchos otros contribuyentes. 
+## 🎯 Resultado
 
-Conoce más sobre nuestros [Cursos de Programación](https://4geeksacademy.com/es/curso-de-programacion-desde-cero/?lang=es) para convertirte en [Full Stack Developer](https://4geeksacademy.com/es/desarrollador-full-stack/desarrollador-full-stack), o nuestro [Data Science Bootcamp](https://4geeksacademy.com/es/coding-bootcamps/curso-datascience-machine-learning).
+Una recreación funcional de un post de Instagram que aplica fundamentos de estructura, estilos, tipografía, imágenes, iconos, Box Model y Flexbox.
+
+## 👨‍💻 Autor
+
+**Gustavo A. Santoyo B.**
+
+Proyecto realizado como parte del aprendizaje de desarrollo Full Stack en 4Geeks Academy.
+
+## 📖 Plantilla original
+
+El proyecto se inició con la [plantilla HTML oficial de 4Geeks Academy](https://github.com/4GeeksAcademy/html-hello).

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Configuración básica del documento HTML5 -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Título que aparece en la pestaña del navegador -->
+    <title>Instagram Post</title>
+
+    <!-- Importación de la fuente Roboto desde Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Importación de iconos de Font Awesome mediante CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Conexión del documento HTML con nuestra hoja de estilos CSS -->
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Contenedor principal que representa el post de Instagram -->
+    <div class="post">
+
+        <!-- Cabecera del post: usuario, información y menú de opciones -->
+        <div class="post-header">
+
+            <!-- Información del usuario -->
+            <div class="post-user">
+
+                <!-- Icono HTML5 proporcionado por Font Awesome -->
+                <i class="fa-brands fa-html5"></i>
+
+                <!-- Nombre y usuario del post -->
+                <div>
+                    <strong>HTML5</strong>
+                    <p>RigoDocGus</p>
+                </div>
+            </div>
+
+            <!-- Menú de opciones representado por tres puntos -->
+            <div class="post-menu">
+                <i class="fa-solid fa-ellipsis-vertical"></i>
+            </div>
+
+        </div>
+
+        <!-- Imagen principal del post -->
+        <div class="post-img">
+
+            <!-- Imagen provisional utilizada para representar la fotografía -->
+            <img
+                src="https://picsum.photos/500/350"
+                alt="Fotografía del post"
+            >
+        </div>
+
+        <!-- Barra de interacción del post -->
+        <div class="post-icons">
+
+            <!-- Grupo de iconos de interacción -->
+            <div class="icons-left">
+                <i class="fa-regular fa-heart"></i>
+                <i class="fa-regular fa-comment"></i>
+                <i class="fa-regular fa-paper-plane"></i>
+            </div>
+
+            <!-- Icono para guardar el post -->
+            <div class="icons-right">
+                <i class="fa-regular fa-bookmark"></i>
+            </div>
+
+        </div>
+
+        <!-- Cuerpo del post: información de likes y descripción -->
+        <div class="post-body">
+
+            <!-- Información de usuarios que dieron "like" -->
+            <p>
+                Liked by <strong>4GeeksAcademy</strong>,
+                <strong>html5</strong>, <strong>Web</strong> and
+                <strong>100,000 others</strong>
+            </p>
+
+            <!-- Descripción del post -->
+            <p>
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                Aenean commodo ligula eget dolor. Aenean massa.
+            </p>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
